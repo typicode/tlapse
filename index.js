@@ -61,7 +61,7 @@ function run () {
 
     var latestFile = recentFiles[0]
     var previousFile = recentFiles[1]
-    var now = dateFormat(Date.now(), 'hh:mm:ss')
+    var now = dateFormat(Date.now(), 'hh:MM:ss')
 
     if (
       latestFile &&
