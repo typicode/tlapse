@@ -4,7 +4,9 @@
 
 A tiny utility that mimics the timelapse mode of your camera/smartphone by taking a screenshot of your website periodically while you develop.
 
-To save disk space, consecutive same screenshots are automatically removed. Uses [pageres-cli](https://github.com/sindresorhus/pageres-cli) for creating screenshots.
+![screenshot](http://i.imgur.com/Ya98dKd.png)
+
+_Uses [pageres-cli](https://github.com/sindresorhus/pageres-cli) for creating screenshots._
 
 ## Install
 
