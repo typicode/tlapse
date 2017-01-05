@@ -1,4 +1,4 @@
-# tlapse [![npm](https://badge.fury.io/js/tlapse.svg)](https://github.com/typicode/tlapse) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+# tlapse [![npm](https://badge.fury.io/js/tlapse.svg)](https://www.npmjs.com/package/tlapse) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 > Create a timelapse of your web development
 
