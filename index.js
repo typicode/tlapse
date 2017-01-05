@@ -28,8 +28,9 @@ var yargs = require('yargs')
 var argv = yargs.argv
 
 if (argv._.length === 0) {
-  return yargs.showHelp()
-} 
+  yargs.showHelp()
+  process.exit(1)
+}
 
 if (argv.directory) {
   mkdirp.sync(argv.directory)
