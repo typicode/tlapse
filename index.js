@@ -64,6 +64,11 @@ function run () {
     var previousFile = recentFiles[1]
     var now = dateFormat(Date.now(), 'hh:MM:ss')
 
+    if (latestFile.indexOf('.png.') !== -1) {
+      console.log(now, '○ Can\'t connect, Skipping')
+      return fs.unlinkSync(latestFile)
+    }
+
     if (
       latestFile &&
       previousFile &&
