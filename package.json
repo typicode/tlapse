@@ -5,7 +5,8 @@
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "test": "standard --fix"
+    "test": "standard --fix",
+    "precommit": "npm test"
   },
   "repository": {
     "type": "git",
