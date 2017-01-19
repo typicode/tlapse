@@ -34,6 +34,10 @@ You can also pass any [pageres-cli](https://github.com/sindresorhus/pageres-cli)
 tlapse -- localhost:3000 1366x768 --selector='.page-header'
 ```
 
+## Tip
+
+Add `tlapse` to your `package.json` scripts and use [npm-run-all](https://github.com/mysticatea/npm-run-all) to start `tlapse` and your server in parallel.
+
 ## License
 
 MIT - [Typicode :cactus:](https://github.com/typicode)
