@@ -2,7 +2,7 @@
 
 > Create a timelapse of your web development
 
-A tiny utility that mimics the timelapse mode of your camera/smartphone by taking screenshots of your website periodically while you develop.
+A tiny utility that takes periodic screenshots of your site while you develop.
 
 ![screenshot](http://i.imgur.com/QL98ry4.png)
 
