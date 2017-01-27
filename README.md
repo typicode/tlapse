@@ -51,3 +51,5 @@ If you want to start your server and `tlapse` at the same time, add `tlapse` to 
 ## License
 
 MIT - [Typicode :cactus:](https://github.com/typicode)
+
+Like this tool? See also [JSON Server](https://github.com/typicode/json-server), [hotel](https://github.com/typicode/hotel) and [husky](https://github.com/typicode/husky).
