@@ -46,7 +46,7 @@ function run () {
   var cmd = [
     pageresPath,
     pageresOptions,
-    '--filename=\'' + Date.now() + '\''
+    '--filename=' + Date.now()
   ].join(' ')
 
   debug(cmd)
