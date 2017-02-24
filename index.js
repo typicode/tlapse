@@ -51,7 +51,7 @@ function run () {
   debug(cmd)
   const result = execa.shellSync(cmd)
 
-  if (result.error) {
+  if (result.status !== 0) {
     console.log('Error')
     console.log('stdout:', result.stdout)
     console.log('stderr:', result.stderr)
