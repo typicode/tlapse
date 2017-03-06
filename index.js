@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var fs = require('fs')
-var debug = require('debug')('tlapse')
+var path = require('path')
 var mkdirp = require('mkdirp')
 var execa = require('execa')
 var ms = require('ms')
@@ -46,8 +46,9 @@ function run () {
     '--filename=' + Date.now()
   ].join(' ')
 
-  debug(cmd)
-  const result = execa.shellSync(cmd)
+  const result = execa.shellSync(cmd, {
+    cwd: path.join(__dirname, './node_modules/.bin')
+  })
 
   if (result.status !== 0) {
     console.log('Error')
