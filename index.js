@@ -7,6 +7,7 @@ var execa = require('execa')
 var ms = require('ms')
 var dateFormat = require('dateformat')
 var pageresPath = path.join(__dirname, './node_modules/.bin/pageres')
+pageresPath = '\"'+pageresPath+'\"'
 
 var yargs = require('yargs')
   .usage('Usage: $0 [options] -- <pageres-cli-options>')
@@ -45,7 +46,7 @@ function run () {
   var cmd = [
     pageresPath,
     pageresOptions,
-    '--filename=\'' + Date.now() + '\''
+    '--filename=' + Date.now()
   ].join(' ')
 
   debug(cmd)
