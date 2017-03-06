@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 var fs = require('fs')
-var path = require('path')
 var debug = require('debug')('tlapse')
 var mkdirp = require('mkdirp')
 var execa = require('execa')
