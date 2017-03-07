@@ -47,9 +47,7 @@ function run () {
     '--filename=' + Date.now()
   ].join(' ')
 
-  const result = execa.shellSync(cmd, {
-    cwd: path.join(__dirname, './node_modules/.bin')
-  })
+  const result = execa.shellSync(cmd)
 
   if (result.status !== 0) {
     console.log('Error')
