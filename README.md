@@ -1,4 +1,4 @@
-# tlapse [![Build Status](https://travis-ci.org/typicode/tlapse.svg?branch=master)](https://travis-ci.org/typicode/tlapse) [![npm](https://badge.fury.io/js/tlapse.svg)](https://www.npmjs.com/package/tlapse)
+# tlapse [![Build Status](https://travis-ci.org/typicode/tlapse.svg?branch=master)](https://travis-ci.org/typicode/tlapse) [![npm](https://badge.fury.io/js/tlapse.svg)](https://www.npmjs.com/package/tlapse) [![Support on Patreon](https://img.shields.io/badge/donate-%E2%99%A5-ff69b4.svg)](https://www.patreon.com/typicode)
 
 > Create a timelapse of your web development
 
