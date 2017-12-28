@@ -4,7 +4,7 @@
 
 A tiny utility that takes periodic screenshots of your site while you develop.
 
-![screenshot](http://i.imgur.com/QL98ry4.png)
+![screenshot](https://cdn.rawgit.com/marionebl/b49b7a884188f5b9f35a0dbc355750c2/raw/669e7c1f95ed8232e4080fbb290d2f9bbd586c83/tlapse.svg)
 
 _Uses [pageres-cli](https://github.com/sindresorhus/pageres-cli) for creating screenshots._
 
