@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var run = require('./src/run').run
+var runTlapse = require('./run').runTlapse
 
 var yargs = require('yargs')
   .usage('Usage: $0 [options] -- <pageres-cli-options>')
@@ -30,4 +30,4 @@ console.log('Interval:', argv.every)
 
 var pageresOptions = argv._.join(' ')
 
-run(pageresOptions, argv.directory, argv.every)
+runTlapse(pageresOptions, argv.directory, argv.every)

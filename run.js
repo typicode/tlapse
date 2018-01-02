@@ -5,9 +5,9 @@ var mkdirp = require('mkdirp')
 var execa = require('execa')
 var ms = require('ms')
 
-var pageresPath = '"' + path.join(__dirname, '../node_modules/.bin/pageres') + '"'
+var pageresPath = '"' + path.join(__dirname, './node_modules/.bin/pageres') + '"'
 
-function run (pageresOptions, directory, every) {
+function runTlapse (pageresOptions, directory, every) {
   if (directory) {
     mkdirp.sync(directory)
     process.chdir(directory)
@@ -54,4 +54,4 @@ function takeScreenshot (pageresOptions) {
   }
 }
 
-module.exports = { run: run, takeScreenshot: takeScreenshot }
+module.exports = { runTlapse: runTlapse, takeScreenshot: takeScreenshot }
