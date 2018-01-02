@@ -16,7 +16,7 @@ function runTlapse (pageresOptions, directory, every) {
   const exec = () => takeScreenshot(pageresOptions)
 
   exec()
-  setInterval(() => exec, ms(every))
+  setInterval(() => exec, ms(every || '1m'))
 }
 
 function takeScreenshot (pageresOptions) {
