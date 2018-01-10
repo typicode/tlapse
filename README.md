@@ -14,10 +14,10 @@ From [CSS-Tricks - Front-End Tools: My Favorite Finds of 2017](https://css-trick
 
 ![CSS-Tricks example](https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_600,f_auto,q_auto/v1513201500/tlapse-example_imp0sn.gif)
 
-Others:
+See also:
 
-* [PentaCode](http://www.penta-code.com/how-to-automatically-take-screenshots-of-your-site-with-tlapse/) [`gif`](http://i.imgur.com/K6rIumh.gif)
-* [moongift.jp](http://www.moongift.jp/2017/02/tlapse-%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9Furl%E3%81%AB%E5%AE%9A%E6%9C%9F%E7%9A%84%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%97%E3%81%A6%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3/) [`gif`](http://images.moongift.jp/2017/01/open-source-tlapse.3cebe89d9666812c9ca2af749c7d51df.gif)
+* [PentaCode - How to Automatically Take Screenshots Of Your Site With TLapse](http://www.penta-code.com/how-to-automatically-take-screenshots-of-your-site-with-tlapse/) [`gif`](http://i.imgur.com/K6rIumh.gif)
+* [Moongift.jp - 指定したURLに定期的にアクセスしてスクリーンショットを保存](http://www.moongift.jp/2017/02/tlapse-%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9Furl%E3%81%AB%E5%AE%9A%E6%9C%9F%E7%9A%84%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%97%E3%81%A6%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3/) [`gif`](http://images.moongift.jp/2017/01/open-source-tlapse.3cebe89d9666812c9ca2af749c7d51df.gif)
 
 _Examples are welcome. Ping me [@typicode](https://twitter.com/typicode) or make a PR if you've created something using tlapse ;)_
 
