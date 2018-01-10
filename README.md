@@ -10,9 +10,9 @@ _Uses [pageres-cli](https://github.com/sindresorhus/pageres-cli) for creating sc
 
 ## Examples
 
-![CSS-Tricks example](https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_600,f_auto,q_auto/v1513201500/tlapse-example_imp0sn.gif)
+From [CSS-Tricks](https://css-tricks.com/front-end-tools-favorite-finds-2017/) [`gif`](https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_600,f_auto,q_auto/v1513201500/tlapse-example_imp0sn.gif)
 
-_From [CSS-Tricks](https://css-tricks.com/front-end-tools-favorite-finds-2017/) [`gif`](https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_600,f_auto,q_auto/v1513201500/tlapse-example_imp0sn.gif)_
+![CSS-Tricks example](https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_600,f_auto,q_auto/v1513201500/tlapse-example_imp0sn.gif)
 
 Others:
 
