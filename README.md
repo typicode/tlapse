@@ -47,7 +47,7 @@ You can also pass any [pageres-cli](https://github.com/sindresorhus/pageres-cli)
 tlapse -- localhost:3000 1366x768 --selector='.page-header'
 ```
 
-## Tip 
+## Sarting tlapse with your server
 
 If you want to start your server and `tlapse` at the same time, add `tlapse` to your `package.json` scripts and use [npm-run-all](https://github.com/mysticatea/npm-run-all) to start them in parallel.
 
@@ -61,14 +61,17 @@ If you want to start your server and `tlapse` at the same time, add `tlapse` to 
 }
 ```
 
-If you want to use tlaps in a start script just import `tlapse\run` and use it like this:
+You can also use `tlapse` as a module.
 
-```
-  import { runTlapse, } from 'tlapse/run'
-  // or
-  // const runTlapse = require('tlapse/run').runTlapse
+```js
+const tlapse = require('tlapse')
+const pageresArgs = 'localhost:3000 1366x768'
+const tlapseOptions = {
+  directory: 'screens',
+  every: '5m'
+}
 
-  runTlapse('localhost:3000', './screens', '5m')
+tlapse(pageresArgs, tlapseOptions)
 ```
 
 ## License

@@ -3,10 +3,11 @@
   "version": "0.1.8",
   "description": "create a timelapse of your web development (uses pageres)",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": "bin.js",
   "scripts": {
     "test": "standard --fix",
-    "precommit": "npm test"
+    "precommit": "npm test",
+    "prepublishOnly": "pkg-ok"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,7 @@
   "dependencies": {
     "dateformat": "^2.0.0",
     "debug": "^2.6.0",
-    "execa": "^0.5.0",
+    "execa": "^0.9.0",
     "mkdirp": "^0.5.1",
     "ms": "^0.7.2",
     "pageres-cli": "^3.1.0",
@@ -34,6 +35,7 @@
   },
   "devDependencies": {
     "husky": "^0.12.0",
+    "pkg-ok": "^1.1.0",
     "standard": "^8.6.0"
   }
 }

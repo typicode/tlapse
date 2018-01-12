@@ -1,33 +1,58 @@
-#!/usr/bin/env node
-var runTlapse = require('./run').runTlapse
+var dateFormat = require('dateformat')
+var fs = require('fs')
+var path = require('path')
+var mkdirp = require('mkdirp')
+var execa = require('execa')
+var ms = require('ms')
+const defaultOptions = require('./defaults')
 
-var yargs = require('yargs')
-  .usage('Usage: $0 [options] -- <pageres-cli-options>')
-  .option('every', {
-    alias: 'e',
-    describe: 'screenshots interval',
-    default: '1m',
-    type: 'string'
-  })
-  .option('directory', {
-    alias: 'd',
-    describe: 'screenshots directory',
-    default: './tlapse',
-    type: 'string'
-  })
-  .help()
-  .version()
+var pageresPath = '"' + path.join(__dirname, './node_modules/.bin/pageres') + '"'
 
-var argv = yargs.argv
+function takeScreenshot (pageresOptions, directory) {
+  var cmd = [pageresPath, pageresOptions, '--filename=' + Date.now()].join(' ')
+  var directory = directory || process.cwd()
 
-if (argv._.length === 0) {
-  yargs.showHelp()
-  process.exit(1)
+  execa.shell(cmd)
+    .then(result => {
+      var recentFiles = fs.readdirSync(directory).reverse()
+
+      var latestFile = recentFiles[0]
+      var previousFile = recentFiles[1]
+      var now = dateFormat(Date.now(), 'hh:MM:ss')
+
+      if (latestFile && latestFile.indexOf('.png.') !== -1) {
+        console.log(now, "○ Can't connect, Skipping")
+        return fs.unlinkSync(latestFile)
+      }
+
+      if (
+        latestFile &&
+        previousFile &&
+        fs.readFileSync(latestFile, 'utf-8') ===
+          fs.readFileSync(previousFile, 'utf-8')
+      ) {
+        console.log(now, '○ Duplicate screenshot, skipping')
+        return fs.unlinkSync(latestFile)
+      }
+
+      console.log(now, result.stdout.trim())
+    })
+    .catch(error => {
+      console.log(error)
+    })
 }
 
-console.log('Screenshots directory:', argv.directory)
-console.log('Interval:', argv.every)
+function run (pageresArgs, tlapseOptions) {
+  tlapseOptions = tlapseOptions || {}
 
-var pageresOptions = argv._.join(' ')
+  if (tlapseOptions.directory) {
+    mkdirp.sync(tlapseOptions.directory)
+  }
 
-runTlapse(pageresOptions, argv.directory, argv.every)
+  const exec = () => takeScreenshot(pageresArgs, tlapseOptions.directory || defaultOptions.directory)
+
+  exec()
+  return setInterval(() => exec, ms(tlapseOptions.every || defaultOptions.every))
+}
+
+module.exports = run
