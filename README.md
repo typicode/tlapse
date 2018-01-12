@@ -61,6 +61,16 @@ If you want to start your server and `tlapse` at the same time, add `tlapse` to 
 }
 ```
 
+If you want to use tlaps in a start script just import `tlapse\run` and use it like this:
+
+```
+  import { runTlapse, } from 'tlapse/run'
+  // or
+  // const runTlapse = require('tlapse/run').runTlapse
+
+  runTlapse('localhost:3000', './screens', '5m')
+```
+
 ## License
 
 MIT - [Typicode :cactus:](https://github.com/typicode)
