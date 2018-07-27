@@ -50,8 +50,6 @@ async function capture ({ url, path, viewport }) {
   await browser.close()
 }
 
-console.log(argv._)
-
 console.log('Screenshots directory:', argv.directory)
 console.log('Interval:', argv.every)
 
