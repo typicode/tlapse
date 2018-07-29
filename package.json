@@ -1,6 +1,6 @@
 {
   "name": "tlapse",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "create a timelapse of your web development (uses pageres)",
   "main": "index.js",
   "bin": "index.js",
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/typicode/tlapse.git"
   },
   "keywords": [
-    "pageres",
+    "puppeteer",
     "timelapse",
     "screenshot"
   ],
@@ -26,10 +26,9 @@
   "dependencies": {
     "dateformat": "^2.0.0",
     "debug": "^2.6.0",
-    "execa": "^0.5.0",
     "mkdirp": "^0.5.1",
     "ms": "^0.7.2",
-    "pageres-cli": "^3.1.0",
+    "puppeteer": "^1.6.1",
     "yargs": "^6.6.0"
   },
   "devDependencies": {
