@@ -24,7 +24,7 @@ const yargs = require('yargs')
   .help()
   .version()
 
-const argv = yargs.argv
+const { argv } = yargs
 
 if (argv._.length === 0) {
   yargs.showHelp()
@@ -36,7 +36,7 @@ if (argv.directory) {
   process.chdir(argv.directory)
 }
 
-async function capture ({ url, path, viewport }) {
+async function capture({ url, path, viewport }) {
   const vp = {
     width: 1280,
     height: 800,
@@ -46,7 +46,7 @@ async function capture ({ url, path, viewport }) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   page.setViewport(vp)
-  await page.goto(url, {waitUntil: 'networkidle2'})
+  await page.goto(url, { waitUntil: 'networkidle2' })
   await page.screenshot({ path })
   await browser.close()
 }
@@ -54,7 +54,7 @@ async function capture ({ url, path, viewport }) {
 console.log('Screenshots directory:', argv.directory)
 console.log('Interval:', argv.every)
 
-async function run () {
+async function run() {
   const url = prependHttp(argv._[0])
   try {
     await capture({
@@ -66,23 +66,22 @@ async function run () {
     return
   }
 
-  const recentFiles = fs
-    .readdirSync(process.cwd())
-    .reverse()
+  const recentFiles = fs.readdirSync(process.cwd()).reverse()
 
   const latestFile = recentFiles[0]
   const previousFile = recentFiles[1]
   const now = dateFormat(Date.now(), 'hh:MM:ss')
 
   if (latestFile && latestFile.indexOf('.png.') !== -1) {
-    console.log(now, '○ Can\'t connect, Skipping')
+    console.log(now, "○ Can't connect, Skipping")
     return fs.unlinkSync(latestFile)
   }
 
   if (
     latestFile &&
     previousFile &&
-    fs.readFileSync(latestFile, 'utf-8') === fs.readFileSync(previousFile, 'utf-8')
+    fs.readFileSync(latestFile, 'utf-8') ===
+      fs.readFileSync(previousFile, 'utf-8')
   ) {
     console.log(now, '○ Duplicate screenshot, skipping')
     return fs.unlinkSync(latestFile)
