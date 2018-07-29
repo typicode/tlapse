@@ -2,8 +2,9 @@
 const fs = require('fs')
 const path = require('path')
 const puppeteer = require('puppeteer')
-const mkdirp = require('mkdirp')
+const prependHttp = require('prepend-http')
 const ms = require('ms')
+const mkdirp = require('mkdirp')
 const dateFormat = require('dateformat')
 
 const yargs = require('yargs')
@@ -54,13 +55,10 @@ console.log('Screenshots directory:', argv.directory)
 console.log('Interval:', argv.every)
 
 async function run () {
-  if (typeof argv._[0] !== 'string') {
-    throw new Error('the url must be a string like \'localhost:3000\'')
-  }
-  const trueURL = /^http(s?):\/\//i.test(argv._[0]) ? argv._[0] : `http://${argv._[0]}`
+  const url = prependHttp(argv._[0])
   try {
     await capture({
-      url: trueURL,
+      url,
       path: path.join(__dirname, argv.directory, `${Date.now()}.png`)
     })
   } catch (err) {
