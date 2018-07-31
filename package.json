@@ -26,20 +26,21 @@
   },
   "homepage": "https://github.com/typicode/tlapse#readme",
   "dependencies": {
-    "dateformat": "^2.0.0",
-    "debug": "^2.6.0",
+    "async-exit-hook": "^2.0.1",
+    "chalk": "^2.4.1",
+    "dateformat": "^3.0.3",
     "mkdirp": "^0.5.1",
-    "ms": "^0.7.2",
+    "ms": "^2.1.1",
     "prepend-http": "^2.0.0",
     "puppeteer": "^1.6.1",
-    "yargs": "^6.6.0"
+    "yargs": "^12.0.1"
   },
   "devDependencies": {
     "eslint": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-xo-space": "^0.19.0",
     "eslint-plugin-prettier": "^2.6.2",
-    "husky": "^0.12.0",
+    "husky": "^0.14.3",
     "prettier": "^1.14.0"
   }
 }

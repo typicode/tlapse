@@ -1,4 +1,4 @@
-# tlapse [![Build Status](https://travis-ci.org/typicode/tlapse.svg?branch=master)](https://travis-ci.org/typicode/tlapse) [![npm](https://badge.fury.io/js/tlapse.svg)](https://www.npmjs.com/package/tlapse) [![Support on Patreon](https://img.shields.io/badge/support-%E2%99%A5-ff69b4.svg)](https://www.patreon.com/typicode)
+# tlapse [![Build Status](https://travis-ci.org/typicode/tlapse.svg?branch=master)](https://travis-ci.org/typicode/tlapse) [![npm](https://badge.fury.io/js/tlapse.svg)](https://www.npmjs.com/package/tlapse)
 
 > Create a timelapse of your web development
 
@@ -24,7 +24,7 @@ _Examples are welcome. Ping me [@typicode](https://twitter.com/typicode) or make
 ## Install
 
 ```
-npm install -g tlapse
+npm install --global tlapse
 ```
 
 ## Usage
@@ -35,26 +35,37 @@ tlapse localhost:3000
 
 ## Options
 
-To change interval and directory where screenshots are saved, use the following options
+You can set custom interval, directory and resolution using options:
 
 ```sh
-tlapse --every 5m --directory ./screens localhost:3000
+tlapse --every 5m --directory ./screens --resolution 360x640 localhost:3000
 ```
 
-## Tip
+__Note__ By default, tlapse will use `1366x768` resolution which is the most popular.
 
-If you want to start your server and `tlapse` at the same time, add `tlapse` to your `package.json` scripts and use [npm-run-all](https://github.com/mysticatea/npm-run-all) to start them in parallel.
+## Automatically start tlapse with your server
+
+Install tlapse and [npm-run-all](https://github.com/mysticatea/npm-run-all) locally
+
+```sh
+npm install tlapse npm-run-all --save-dev
+```
 
 ```json
 {
   "scripts": {
-    "start": "run-p server tlapse",
+    "dev": "run-p server tlapse",
     "server": "node server",
     "tlapse": "tlapse localhost:3000"
   }
 }
 ```
 
+```sh
+# will start server and tlapse in parallel
+npm run dev
+```
+
 ## License
 
-MIT - [Typicode :cactus:](https://github.com/typicode)
+MIT - [Typicode :cactus:](https://github.com/typicode) - [Patreon](https://patreon.com/typicode)
