@@ -36,8 +36,6 @@ const { argv } = yargs
   .help()
   .version()
 
-console.log(argv)
-
 async function start() {
   const browser = await index(argv)
   process.on('SIGINT', async () => {
