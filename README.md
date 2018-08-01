@@ -2,7 +2,7 @@
 
 > Create a timelapse of your web development 📷
 
-A tiny utility that takes periodic screenshots of your site while you develop. Uses [puppeteer](https://github.com/GoogleChrome/puppeteer) for creating beautiful high resolution screenshots 🌸.
+A tiny utility that takes periodic screenshots of your site while you develop. Uses [Puppeteer](https://github.com/GoogleChrome/puppeteer) for creating beautiful high resolution screenshots 🌸.
 
 ## Usage
 
