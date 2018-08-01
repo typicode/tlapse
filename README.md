@@ -4,7 +4,7 @@
 
 A tiny utility that takes periodic screenshots of your site while you develop 📷
 
-_Uses [puppeteer](https://github.com/GoogleChrome/puppeteer) for creating beautiful screenshots 🌸_
+Uses [puppeteer](https://github.com/GoogleChrome/puppeteer) for creating beautiful screenshots 🌸
 
 ## Examples
 
