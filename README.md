@@ -24,26 +24,11 @@ npm install npm-run-all tlapse --save-dev
 npm run dev
 ```
 
-__Note__ [`npm-run-all`](https://github.com/mysticatea/npm-run-all) lets you run scripts in parallel.
+__Note__ [`npm-run-all`](https://github.com/mysticatea/npm-run-all) lets you run scripts in parallel and makes sure that both `tlapse` and `server` are started.
 
-Alternatively, you can also install `tlapse` globally:
+__Options__ `tlapse` can be configured to use different screenshot resolution, screenshot interval, ... to view available options run `tlapse --help`.
 
-```sh
-npm install tlapse --global
-tlapse localhost:3000
-```
-
-## Options
-
-You can set custom interval, directory and resolution using options:
-
-```sh
-tlapse --every 5m --directory ./screens --resolution 360x640 localhost:3000
-```
-
-__Note__ by default, `tlapse` will use `1366x768` resolution which is the most popular.
-
-## Examples
+## Articles
 
 * [__CSS-Tricks - Front-End Tools: My Favorite Finds of 2017__](https://css-tricks.com/front-end-tools-favorite-finds-2017/)
 * [PentaCode - How to Automatically Take Screenshots Of Your Site With TLapse](http://www.penta-code.com/how-to-automatically-take-screenshots-of-your-site-with-tlapse/) [`gif`](http://i.imgur.com/K6rIumh.gif)
