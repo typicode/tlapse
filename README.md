@@ -1,10 +1,8 @@
 # tlapse [![Build Status](https://travis-ci.org/typicode/tlapse.svg?branch=master)](https://travis-ci.org/typicode/tlapse) [![npm](https://badge.fury.io/js/tlapse.svg)](https://www.npmjs.com/package/tlapse)
 
-> Create a timelapse of your web development
+> Create a timelapse of your web development 📷
 
-A tiny utility that takes periodic screenshots of your site while you develop 📷
-
-Uses [puppeteer](https://github.com/GoogleChrome/puppeteer) for creating beautiful screenshots 🌸
+A tiny utility that takes periodic screenshots of your site while you develop. Uses [puppeteer](https://github.com/GoogleChrome/puppeteer) for creating beautiful high resolution screenshots 🌸.
 
 ## Examples
 
@@ -17,7 +15,7 @@ See also:
 * [PentaCode - How to Automatically Take Screenshots Of Your Site With TLapse](http://www.penta-code.com/how-to-automatically-take-screenshots-of-your-site-with-tlapse/) [`gif`](http://i.imgur.com/K6rIumh.gif)
 * [Moongift.jp - 指定したURLに定期的にアクセスしてスクリーンショットを保存](http://www.moongift.jp/2017/02/tlapse-%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9Furl%E3%81%AB%E5%AE%9A%E6%9C%9F%E7%9A%84%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%97%E3%81%A6%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3/) [`gif`](http://images.moongift.jp/2017/01/open-source-tlapse.3cebe89d9666812c9ca2af749c7d51df.gif)
 
-_Examples are welcome. Ping me [@typicode](https://twitter.com/typicode) or make a PR if you've created something using tlapse 😉_
+_Examples are welcome. Ping me [@typicode](https://twitter.com/typicode) or make a PR if you've created something using tlapse_ 😉
 
 ## Usage
 
@@ -41,11 +39,11 @@ npm install tlapse npm-run-all --save-dev
 npm run dev
 ```
 
-__Note__ [npm-run-all](https://github.com/mysticatea/npm-run-all) lets you run scripts in parallel.
+__Note__ [`npm-run-all`](https://github.com/mysticatea/npm-run-all) lets you run scripts in parallel.
 
 ### Manual start
 
-You can also install `tlapse` globally
+You can also install `tlapse` globally and run it manually
 
 ```sh
 npm install tlapse --global
