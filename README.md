@@ -22,7 +22,7 @@ _Examples are welcome. Ping me [@typicode](https://twitter.com/typicode) or make
 ### Automatically start tlapse with your server (recommended)
 
 ```sh
-npm install tlapse npm-run-all --save-dev
+npm install npm-run-all tlapse --save-dev
 ```
 
 ```json
