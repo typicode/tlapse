@@ -26,7 +26,11 @@ npm run dev
 
 __Note__ [`npm-run-all`](https://github.com/mysticatea/npm-run-all) lets you run scripts in parallel and makes sure that both `tlapse` and `server` are started.
 
-__Options__ `tlapse` can be configured to use different screenshot resolution, interval, etc... to view available options run `tlapse --help`.
+__Options__ `tlapse` can be configured to use different screenshot resolution, interval, etc... to view available options run 
+
+```
+tlapse --help
+```
 
 ## Articles
 
