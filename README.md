@@ -4,9 +4,7 @@
 
 A tiny utility that takes periodic screenshots of your site while you develop.
 
-![screenshot](https://cdn.rawgit.com/marionebl/b49b7a884188f5b9f35a0dbc355750c2/raw/669e7c1f95ed8232e4080fbb290d2f9bbd586c83/tlapse.svg)
-
-_Uses [puppeteer](https://github.com/GoogleChrome/puppeteer) for creating screenshots._
+_Uses [puppeteer](https://github.com/GoogleChrome/puppeteer) for creating beautiful screenshots._
 
 ## Examples
 
@@ -21,35 +19,15 @@ See also:
 
 _Examples are welcome. Ping me [@typicode](https://twitter.com/typicode) or make a PR if you've created something using tlapse ;)_
 
-## Install
-
-```
-npm install --global tlapse
-```
-
 ## Usage
 
-```sh
-tlapse localhost:3000
-```
-
-## Options
-
-You can set custom interval, directory and resolution using options:
-
-```sh
-tlapse --every 5m --directory ./screens --resolution 360x640 localhost:3000
-```
-
-__Note__ By default, tlapse will use `1366x768` resolution which is the most popular.
-
-## Automatically start tlapse with your server
-
-Install tlapse and [npm-run-all](https://github.com/mysticatea/npm-run-all) locally
+### Automatically start tlapse with your server (recommended)
 
 ```sh
 npm install tlapse npm-run-all --save-dev
 ```
+
+__Note__ [npm-run-all](https://github.com/mysticatea/npm-run-all) runs given npm-scripts in parallel.
 
 ```json
 {
@@ -62,9 +40,33 @@ npm install tlapse npm-run-all --save-dev
 ```
 
 ```sh
-# will start server and tlapse in parallel
 npm run dev
 ```
+
+### Manual start
+
+You can also install `tlapse` globally
+
+```sh
+npm install tlapse --global
+tlapse localhost:3000
+```
+
+Alternatively, you can use `npx`
+
+```sh
+npx tlapse localhost:3000
+```
+
+## Options
+
+You can set custom interval, directory and resolution using options:
+
+```sh
+tlapse --every 5m --directory ./screens --resolution 360x640 localhost:3000
+```
+
+__Note__ By default, `tlapse` will use `1366x768` resolution which is the most popular.
 
 ## License
 

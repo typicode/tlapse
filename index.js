@@ -6,11 +6,7 @@ const ms = require('ms')
 const mkdirp = require('mkdirp')
 const dateFormat = require('dateformat')
 
-async function takeScreenshot(page, url, viewport) {
-  page.setViewport({
-    ...viewport,
-    deviceScaleFactor: 2
-  })
+async function takeScreenshot(page, url) {
   await page.goto(url, { waitUntil: 'networkidle2' })
   return page.screenshot()
 }
@@ -21,11 +17,7 @@ async function addScreenshot(page, argv) {
     mkdirp.sync(argv.directory)
 
     // Get screenshot as a buffer but don't write to disk yet
-    const screenshotBuffer = await takeScreenshot(
-      page,
-      argv._[0],
-      argv.viewport
-    )
+    const screenshotBuffer = await takeScreenshot(page, argv._[0])
 
     // Read screenshots directory
     const recentFiles = fs.readdirSync(argv.directory).reverse()
@@ -44,8 +36,10 @@ async function addScreenshot(page, argv) {
         .readFileSync(path.join(argv.directory, lastFile))
         .equals(screenshotBuffer)
     ) {
+      // Duplicate
       console.log(chalk.gray(now, 'Duplicate screenshot, skipping'))
     } else {
+      // Write screenshot to disk
       const filename = path.join(argv.directory, `${Date.now()}.png`)
       fs.writeFileSync(filename, screenshotBuffer)
       console.log(chalk.green(now, 'Screenshot saved'))
@@ -70,9 +64,12 @@ module.exports = async function(argv) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
+  page.setViewport({
+    ...argv.viewport,
+    deviceScaleFactor: 2
+  })
+
   await addScreenshot(page, argv)
 
   setInterval(() => addScreenshot(page, argv), ms(argv.every))
-
-  return browser
 }

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const path = require('path')
 const yargs = require('yargs')
 const prependHttp = require('prepend-http')
@@ -36,13 +37,4 @@ const { argv } = yargs
   .help()
   .version()
 
-async function start() {
-  const browser = await index(argv)
-  process.on('SIGINT', async () => {
-    console.log('Closing browser')
-    await browser.close()
-    process.exit()
-  })
-}
-
-start()
+index(argv)
