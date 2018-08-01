@@ -6,7 +6,7 @@ A tiny utility that takes periodic screenshots of your site while you develop. U
 
 ## Examples
 
-From [__CSS-Tricks - Front-End Tools: My Favorite Finds of 2017__](https://css-tricks.com/front-end-tools-favorite-finds-2017/)
+[__CSS-Tricks - Front-End Tools: My Favorite Finds of 2017__](https://css-tricks.com/front-end-tools-favorite-finds-2017/)
 
 ![CSS-Tricks example](https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_600,f_auto,q_auto/v1513201500/tlapse-example_imp0sn.gif)
 
