@@ -61,7 +61,10 @@ module.exports = async function(argv) {
   )
   console.log(chalk.gray('URL'), argv._[0])
 
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+    ignoreHTTPSErrors: true,
+    args:['--ignore-certificate-errors', '--enable-feature=NetworkService']
+  })
   const page = await browser.newPage()
 
   page.setViewport({
