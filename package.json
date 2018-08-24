@@ -1,6 +1,6 @@
 {
   "name": "tlapse",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "create a timelapse of your web development (uses pageres)",
   "main": "index.js",
   "bin": "bin.js",
