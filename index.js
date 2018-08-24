@@ -63,7 +63,7 @@ module.exports = async function(argv) {
 
   const browser = await puppeteer.launch({
     ignoreHTTPSErrors: true,
-    args:['--ignore-certificate-errors', '--enable-feature=NetworkService']
+    args: ['--ignore-certificate-errors', '--enable-feature=NetworkService']
   })
   const page = await browser.newPage()
 
