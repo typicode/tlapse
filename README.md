@@ -4,6 +4,10 @@
 
 A tiny utility that takes periodic screenshots of your site while you develop. Uses [Puppeteer](https://github.com/GoogleChrome/puppeteer) for creating beautiful high resolution screenshots 🌸.
 
+<a href="https://www.patreon.com/typicode">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
 ## Usage
 
 ```sh
